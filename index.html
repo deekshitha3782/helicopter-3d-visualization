@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helicopter 3D Visualizations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px;
+        }
+        .visualization-list {
+            list-style: none;
+        }
+        .visualization-item {
+            background: #f8f9fa;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        .visualization-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .visualization-item h3 {
+            color: #667eea;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .view-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .view-link {
+            text-decoration: none;
+            color: white;
+            background: #667eea;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .view-link:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        .view-link.points {
+            background: #4CAF50;
+        }
+        .view-link.points:hover {
+            background: #45a049;
+        }
+        .view-link.direction {
+            background: #2196F3;
+        }
+        .view-link.direction:hover {
+            background: #1976D2;
+        }
+        .description {
+            color: #6c757d;
+            font-size: 0.95em;
+            margin-top: 8px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚁 Helicopter 3D Trajectory Visualizations</h1>
+            <p>Interactive 3D maps showing helicopter flight paths with radio altitude data</p>
+        </div>
+        <div class="content">
+            <ul class="visualization-list">
+                <li class="visualization-item">
+                    <h3>August 19th - Flight 1</h3>
+                    <div class="view-links">
+                        <a href="aug_19th_1_points.html" class="view-link points">📍 Location (Points)</a>
+                        <a href="aug_19th_1_direction.html" class="view-link direction">📍 Location (Direction)</a>
+                        <a href="statedata_19_Aug_1_points.html" class="view-link points">📊 StateData (Points)</a>
+                        <a href="statedata_19_Aug_1_direction.html" class="view-link direction">📊 StateData (Direction)</a>
+                    </div>
+                    <div class="description">3D visualization with radio altitude, terrain data, and trajectory path</div>
+                </li>
+                <li class="visualization-item">
+                    <h3>August 19th - Flight 2</h3>
+                    <div class="view-links">
+                        <a href="aug_19th_2_points.html" class="view-link points">📍 Location (Points)</a>
+                        <a href="aug_19th_2_direction.html" class="view-link direction">📍 Location (Direction)</a>
+                        <a href="statedata_19_Aug_2_points.html" class="view-link points">📊 StateData (Points)</a>
+                        <a href="statedata_19_Aug_2_direction.html" class="view-link direction">📊 StateData (Direction)</a>
+                    </div>
+                    <div class="description">3D visualization with radio altitude, terrain data, and trajectory path</div>
+                </li>
+                <li class="visualization-item">
+                    <h3>August 19th - Flight 3</h3>
+                    <div class="view-links">
+                        <a href="aug_19th_3_points.html" class="view-link points">📍 Location (Points)</a>
+                        <a href="aug_19th_3_direction.html" class="view-link direction">📍 Location (Direction)</a>
+                        <a href="statedata_19_Aug_3_points.html" class="view-link points">📊 StateData (Points)</a>
+                        <a href="statedata_19_Aug_3_direction.html" class="view-link direction">📊 StateData (Direction)</a>
+                    </div>
+                    <div class="description">3D visualization with radio altitude, terrain data, and trajectory path</div>
+                </li>
+                <li class="visualization-item">
+                    <h3>August 22nd - Flight 1</h3>
+                    <div class="view-links">
+                        <a href="aug_22nd_1_points.html" class="view-link points">📍 Location (Points)</a>
+                        <a href="aug_22nd_1_direction.html" class="view-link direction">📍 Location (Direction)</a>
+                        <a href="statedata_22_Aug_1_points.html" class="view-link points">📊 StateData (Points)</a>
+                        <a href="statedata_22_Aug_1_direction.html" class="view-link direction">📊 StateData (Direction)</a>
+                    </div>
+                    <div class="description">3D visualization with radio altitude, terrain data, and trajectory path</div>
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+</body>
+</html>
